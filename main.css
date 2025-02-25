@@ -1,0 +1,265 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+/* || RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --MAIN-BG:#0A0C1C;
+  --CARD-BG:#1B1937;
+  --WHITE:#FFFFFF;
+  --PURPLE:#AB5CDB;
+
+  /*SHADOWS*/
+  --SHADOW:0px 20px 20px -10px hsla(233, 27%, 13%, 20.31%);
+  --TEXT-SHADOW: 0 4px 4px 0 hsla(0, 0%, 0%, 25%); 
+
+  --TEXT-SHADOW: 0 4px 4px 0 hsla(0, 0%, 0%, 25%); 
+
+  /* TYPOGRAPHY */
+  --FF1: "Inter", sans-serif;
+  --FF2: "Lexend Deca", sans-serif;
+
+  --TITLE-MOB:bold 1.75rem/2rem var(--FF1);
+  --DETAILS-MOB:normal 0.94rem/1.56rem var(--FF1);
+  --STATS-MOB: bold 1.5rem var(--FF1);
+  --LABEL-MOB: normal 0.75rem/1.56rem var(--FF2);
+
+  /*DESKTOP*/
+  --TITLE:bold 2.25rem/2.75rem var(--FF1);
+  --DETAILS:normal 0.94rem/1.56rem var(--FF1);
+  --STATS: bold 1.5rem var(--FF1);
+  --LABEL: normal 0.75rem/1.56rem var(--FF2);
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.center {
+  text-align: center;
+}
+.responsive-image {
+  display: none;
+}
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;/*1rem*/
+}
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  display:grid;
+  place-content:center;
+  background-color: var(--MAIN-BG);
+}
+h1{
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+.main-card{
+  width:327px;
+  height:780px;
+  background-color: var(--CARD-BG);
+  margin:5.5rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--SHADOW);  
+}
+.main-card__hero {
+  width:327px;
+  height:240px;
+  position:relative;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 2.5rem;
+}
+.main-card__hero-mask{
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height:240px;
+  background-color: hsla(277,64%, 61%, 0.5); 
+  border-radius: 8px 8px 0 0;
+  z-index: 1;  
+}
+.main-hero-mobile img{
+  border-radius: 8px 8px 0 0;
+  position:absolute;
+  z-index: 0;
+  height:240px;
+  width: 327px;  
+}
+.img-header__desktop{
+  display: none;
+}
+.main-card__details{
+  margin-bottom: 2.5rem;
+  padding: 0rem 1.97rem 0rem 1.97rem;  
+  height:540px;
+  width: 327px;
+  display: flex;
+  flex-flow: column;
+  align-items:center;
+}
+.main-card-details__title{
+  font:var(--TITLE-MOB);
+  color:var(--WHITE);  
+  text-shadow: var(--TEXT-SHADOW);
+  opacity: 100%; 
+  color:var(--WHITE);  
+  text-shadow: var(--TEXT-SHADOW);
+  opacity: 100%; 
+  color:var(--WHITE); 
+  margin-top: 2.5rem;
+  text-shadow: var(--TEXT-SHADOW);
+  opacity: 100%;
+}
+span{
+  font:var(--TITLE-MOB);
+  color:var(--PURPLE);
+  text-shadow: var(--TEXT-SHADOW);
+  opacity: 100%;
+}
+.main-card-details-subtext {
+ font: var(--DETAILS-MOB);
+ color: var(--WHITE);
+ margin-top: 1rem;
+ text-shadow: var(--TEXT-SHADOW);
+ opacity: 75%;
+}
+.main-card-details__span{
+  font:var(--TITLE-MOB);
+  color:var(--PURPLE);
+  text-shadow: var(--TEXT-SHADOW);
+  opacity: 100%; 
+}
+.main-card__details-subtext {
+ font: var(--DETAILS-MOB);
+ color: var(--WHITE);
+ margin-top: 1rem; 
+ opacity: 75%;
+ text-shadow: var(--TEXT-SHADOW);
+}
+.main-card__stats-wrapper{
+  margin-top: 2.5rem;
+  padding-bottom: 2rem;
+  display:flex;
+  flex-flow: column;
+  gap:1.5rem;
+  align-items: center; 
+}
+.main-card__companies-number,
+.main-card__templates-number,
+.main-card__queries-number{
+  font: var(--STATS-MOB);
+  color: var(--WHITE);
+  letter-spacing: 0px;
+  text-shadow: var(--TEXT-SHADOW);
+  opacity: 100%;
+}
+.main-card__label{
+  font: var(--LABEL-MOB);
+  color: var(--WHITE);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: var(--TEXT-SHADOW);
+  opacity: 60%;  
+}
+
+/*DESKTOP DESIGN*/
+
+@media screen and (min-width:992px){
+  .center {
+    text-align: left;
+  }
+  .main-card{
+    width:1110px;
+    height:446px;  
+    margin:11.0625rem 10.3125rem; 
+    display: flex; 
+    flex-flow: row-reverse;   
+  }
+
+  .main-card__hero {
+    width:540px;
+    height:446px;
+    position:relative;
+    border-radius:  0  8px  8px 0;
+    margin-bottom: 0rem;
+    margin-left: 5.9375rem;
+  }
+  .main-card__hero-mask{    
+    height:446px;
+    border-radius: 0 8px  8px 0;     
+  }
+  .main-hero-mobile-img{
+    display: none;
+  }
+  .img-header__desktop{
+    display: block;
+  }
+  .img-header__desktop img{
+    border-radius: 0 8px 8px  0;    
+    height:446px;     
+  }
+ 
+  .main-card__details{
+    margin-bottom: 0rem;
+    padding: 4.4375rem 0rem 59px 4.4688rem;  
+    height:570px;
+    width: 446px;  
+    align-items:left;
+  }
+  .main-card-details__title{
+    font:var(--TITLE);   
+  }
+  .main-card-details__span{
+    font:var(--TITLE);
+  }
+  .main-card__details-subtext {
+   font: var(--DETAILS);   
+   margin-top: 1.5625rem; 
+  }
+  .main-card__stats-wrapper{
+    margin-top: 4.5rem;
+    padding-bottom: 0rem;
+    padding-left: 0rem;    
+    flex-flow: row;
+    gap:0rem;  
+  }
+  .main-card__companies-div{
+    margin-right: 3.9375rem;  
+  }
+  .main-card__templates-div{
+    margin-right: 3.75rem;
+  }
+
+  .main-card__companies-number,
+  .main-card__templates-number,
+  .main-card__queries-number{
+    font: var(--STATS);  
+  }
+  .main-card__label{
+    font: var(--LABEL);  
+  }  
