@@ -135,12 +135,7 @@ h1{
   text-shadow: var(--TEXT-SHADOW);
   opacity: 100%;
 }
-span{
-  font:var(--TITLE-MOB);
-  color:var(--PURPLE);
-  text-shadow: var(--TEXT-SHADOW);
-  opacity: 100%;
-}
+
 .main-card-details-subtext {
  font: var(--DETAILS-MOB);
  color: var(--WHITE);
@@ -166,7 +161,7 @@ span{
   padding-bottom: 2rem;
   display:flex;
   flex-flow: column;
-  gap:1.5rem;
+  gap:.125rem;
   align-items: center; 
 }
 .main-card__companies-number,
@@ -222,17 +217,19 @@ span{
   .img-header__desktop img{
     border-radius: 0 8px 8px  0;    
     height:446px;     
-  }
- 
+  } 
   .main-card__details{
     margin-bottom: 0rem;
-    padding: 4.4375rem 0rem 59px 4.4688rem;  
+    padding: 4.4375rem 0rem 3.6875rem 4.4688rem;  
     height:570px;
-    width: 446px;  
-    align-items:left;
+    width: 446px; 
+   
+  padding: 0rem 1.97rem 0rem 1.97rem;  
+  
+  align-items:center;
   }
   .main-card-details__title{
-    font:var(--TITLE);   
+    font:var(--TITLE);       
   }
   .main-card-details__span{
     font:var(--TITLE);
@@ -246,7 +243,7 @@ span{
     padding-bottom: 0rem;
     padding-left: 0rem;    
     flex-flow: row;
-    gap:0rem;  
+    gap: 0rem;
   }
   .main-card__companies-div{
     margin-right: 3.9375rem;  
