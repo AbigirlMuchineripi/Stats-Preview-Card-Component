@@ -182,7 +182,7 @@ h1{
   .main-card{
     width:1110px;
     height:446px;  
-    margin:11.0625rem 10.3125rem; 
+    margin:11.0625rem auto; 
     display: flex; 
     flex-flow: row-reverse; 
       
