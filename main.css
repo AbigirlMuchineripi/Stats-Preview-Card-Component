@@ -126,13 +126,6 @@ h1{
   font:var(--TITLE-MOB);
   color:var(--WHITE);  
   text-shadow: var(--TEXT-SHADOW);
-  opacity: 100%; 
-  color:var(--WHITE);  
-  text-shadow: var(--TEXT-SHADOW);
-  opacity: 100%; 
-  color:var(--WHITE); 
-  margin-top: 2.5rem;
-  text-shadow: var(--TEXT-SHADOW);
   opacity: 100%;
 }
 
@@ -161,7 +154,7 @@ h1{
   padding-bottom: 2rem;
   display:flex;
   flex-flow: column;
-  gap:.125rem;
+  gap:1.5rem;
   align-items: center; 
 }
 .main-card__companies-number,
@@ -184,30 +177,32 @@ h1{
 
 /*DESKTOP DESIGN*/
 
-@media screen and (min-width:992px){
-  .center {
-    text-align: left;
-  }
+@media screen and (min-width:768px){
+  
   .main-card{
     width:1110px;
     height:446px;  
     margin:11.0625rem 10.3125rem; 
     display: flex; 
-    flex-flow: row-reverse;   
+    flex-flow: row-reverse; 
+      
   }
 
   .main-card__hero {
     width:540px;
     height:446px;
     position:relative;
-    border-radius:  0  8px  8px 0;
     margin-bottom: 0rem;
-    margin-left: 5.9375rem;
+    margin-left: 5.9375rem;    
   }
-  .main-card__hero-mask{    
+  img{
+    border-radius: 0 8px 8px 0;
+    height:446px;
+  }
+  .main-card__hero-mask {       
     height:446px;
     border-radius: 0 8px  8px 0;     
-  }
+  }  
   .main-hero-mobile-img{
     display: none;
   }
@@ -216,27 +211,31 @@ h1{
   }
   .img-header__desktop img{
     border-radius: 0 8px 8px  0;    
-    height:446px;     
+    height:446px;
+        
   } 
   .main-card__details{
     margin-bottom: 0rem;
     padding: 4.4375rem 0rem 3.6875rem 4.4688rem;  
-    height:570px;
-    width: 446px; 
-   
-  padding: 0rem 1.97rem 0rem 1.97rem;  
-  
-  align-items:center;
+    height:  446px;
+    width:570px;   
+    align-items:flex-start;
   }
   .main-card-details__title{
-    font:var(--TITLE);       
+    font:var(--TITLE);    
+    text-align: left; 
+    width: 403px;
+    height: 88px;      
   }
   .main-card-details__span{
     font:var(--TITLE);
   }
   .main-card__details-subtext {
    font: var(--DETAILS);   
-   margin-top: 1.5625rem; 
+   margin-top: 1.5625rem;
+   text-align: left; 
+   width: 374px;
+   height: 75px;
   }
   .main-card__stats-wrapper{
     margin-top: 4.5rem;
@@ -255,8 +254,10 @@ h1{
   .main-card__companies-number,
   .main-card__templates-number,
   .main-card__queries-number{
-    font: var(--STATS);  
+    font: var(--STATS);
+    text-align: left;  
   }
   .main-card__label{
     font: var(--LABEL);  
   }  
+}
